@@ -1,0 +1,19 @@
+version: '3'
+services:
+  downloader:
+    build: .
+    container_name: apple-music-downloader
+    ports:
+      - "58000:5000"
+      - "10020:10020" 
+    volumes:
+      - ./config:/app/config
+      - /mnt/user/5. Music/:/app/downloads
+      - ./data/wrapper:/app/wrapper_data
+    restart: unless-stopped
+    networks:
+      - amd_net
+
+networks:
+  amd_net:
+    driver: bridge
