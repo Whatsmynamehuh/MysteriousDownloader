@@ -4,16 +4,25 @@ A powerful, modern, and modular Web UI for downloading high-quality audio from A
 
 ## 📸 Screenshots
 
-To add screenshots to this README, simply place your images in the `screenshots/` folder within the project. Name them as follows:
+To add screenshots, place your images in the `screenshots/` folder.
 
-| View | Filename | Preview |
-|---|---|---|
-| **Login** | `screenshots/login.png` | ![Login](screenshots/login.png) |
-| **Search** | `screenshots/search.png` | ![Search](screenshots/search.png) |
-| **Discography** | `screenshots/discography.png` | ![Discography](screenshots/discography.png) |
-| **Queue** | `screenshots/queue.png` | ![Queue](screenshots/queue.png) |
-| **History** | `screenshots/history.png` | ![History](screenshots/history.png) |
-| **Settings** | `screenshots/settings.png` | ![Settings](screenshots/settings.png) |
+### Login
+![Login](screenshots/login.png)
+
+### Search
+![Search](screenshots/search.png)
+
+### Discography
+![Discography](screenshots/discography.png)
+
+### Queue (Unified Hero)
+![Queue](screenshots/queue.png)
+
+### History
+![History](screenshots/history.png)
+
+### Settings
+![Settings](screenshots/settings.png)
 
 ## ✨ Features
 
