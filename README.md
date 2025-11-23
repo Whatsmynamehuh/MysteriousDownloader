@@ -7,7 +7,8 @@ A powerful, modern, and modular Web UI for downloading high-quality audio from A
 To add screenshots, place your images in the `screenshots/` folder.
 
 ### Login
-![Login](screenshots/login.png)
+![Login](<img width="1913" height="904" alt="image" src="https://github.com/user-attachments/assets/886f8d59-33b6-4216-ac54-990c60f82338" />
+)
 
 ### Search
 ![Search](screenshots/search.png)
