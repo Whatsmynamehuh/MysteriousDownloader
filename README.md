@@ -101,6 +101,19 @@ You can configure the application via the **Settings** tab in the Web UI or by e
 *   `album-folder-format`: Customize how folders are named (e.g., `{ArtistName} - {AlbumName}`).
 *   `parallel-downloads`: Default concurrency limit.
 
+### 📂 Changing Download Location
+To change where files are saved on your actual computer/server, you do **not** need to edit the app settings. Instead, update the **Docker Volume mapping** in `docker-compose.yml`.
+
+1.  Open `docker-compose.yml`.
+2.  Find the `volumes` section.
+3.  Change the left side of the mapping:
+    ```yaml
+    volumes:
+      - /your/custom/music/path:/app/downloads  <-- CHANGE THIS
+    ```
+    *   **Left Side:** The folder on your computer/Unraid server.
+    *   **Right Side:** `/app/downloads` (Do NOT change this, it's where the app looks internally).
+
 ### 🔑 Authentication Helper
 The application includes a built-in login system, but if you need to manually grab tokens (e.g., for a specific region or troubleshooting):
 1.  Go to **Settings > Authentication & Region**.
