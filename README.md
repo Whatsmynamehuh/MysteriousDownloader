@@ -103,7 +103,8 @@ You can configure the application via the **Settings** tab in the Web UI or by e
 
 ## 📝 Credits
 
-*   **Backend/Logic:** Based on `apple-music-alac-atmos-downloader`.
+*   **Core Tools:** `apple-music-downloader` and `wrapper` by **ZHAAREY**.
+*   **Backend/Logic:** Python/FastAPI orchestration.
 *   **UI Design:** Custom Glassmorphism interface.
 
 ---
