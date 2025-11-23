@@ -2,7 +2,19 @@
 
 A powerful, modern, and modular Web UI for downloading high-quality audio from Apple Music. Built with Python (FastAPI) and Vanilla JavaScript, designed to run seamlessly in Docker.
 
-![Unified Hero UI](https://via.placeholder.com/800x400.png?text=Unified+Hero+UI+Preview)
+## 📸 Screenshots
+
+| **Login** | **Search** |
+|:---:|:---:|
+| ![Login Page](https://via.placeholder.com/400x300.png?text=Login+Page) | ![Search Page](https://via.placeholder.com/400x300.png?text=Search+Page) |
+
+| **Discography** | **Queue (Hero UI)** |
+|:---:|:---:|
+| ![Discography Modal](https://via.placeholder.com/400x300.png?text=Discography+Modal) | ![Unified Queue](https://via.placeholder.com/400x300.png?text=Unified+Queue+Hero) |
+
+| **History** | **Settings** |
+|:---:|:---:|
+| ![History View](https://via.placeholder.com/400x300.png?text=History+View) | ![Settings Page](https://via.placeholder.com/400x300.png?text=Settings+Page) |
 
 ## ✨ Features
 
