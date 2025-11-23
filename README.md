@@ -101,6 +101,15 @@ You can configure the application via the **Settings** tab in the Web UI or by e
 *   `album-folder-format`: Customize how folders are named (e.g., `{ArtistName} - {AlbumName}`).
 *   `parallel-downloads`: Default concurrency limit.
 
+### 🔑 Authentication Helper
+The application includes a built-in login system, but if you need to manually grab tokens (e.g., for a specific region or troubleshooting):
+1.  Go to **Settings > Authentication & Region**.
+2.  Click the **COPY SCRIPT** button.
+3.  Open [music.apple.com](https://music.apple.com) in your browser and sign in.
+4.  Open Developer Tools (**F12**) and go to the **Console** tab.
+5.  Paste the script and press **Enter**.
+6.  A popup will appear with your `media-user-token` and `authorization-token`. Copy these back into the Settings fields.
+
 ## 📝 Credits
 
 *   **Core Tools:** `apple-music-downloader` and `wrapper` by **ZHAAREY**.
