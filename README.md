@@ -4,17 +4,22 @@ A powerful, modern, and modular Web UI for downloading high-quality audio from A
 
 ## 📸 Screenshots
 
+To add screenshots, simply place your images in the `screenshots` folder with the filenames below.
+
 | **Login** | **Search** |
 |:---:|:---:|
-| ![Login Page](https://via.placeholder.com/400x300.png?text=Login+Page) | ![Search Page](https://via.placeholder.com/400x300.png?text=Search+Page) |
+| `screenshots/login.png` | `screenshots/search.png` |
+| ![Login](screenshots/login.png) | ![Search](screenshots/search.png) |
 
 | **Discography** | **Queue (Hero UI)** |
 |:---:|:---:|
-| ![Discography Modal](https://via.placeholder.com/400x300.png?text=Discography+Modal) | ![Unified Queue](https://via.placeholder.com/400x300.png?text=Unified+Queue+Hero) |
+| `screenshots/discography.png` | `screenshots/queue.png` |
+| ![Discography](screenshots/discography.png) | ![Queue](screenshots/queue.png) |
 
 | **History** | **Settings** |
 |:---:|:---:|
-| ![History View](https://via.placeholder.com/400x300.png?text=History+View) | ![Settings Page](https://via.placeholder.com/400x300.png?text=Settings+Page) |
+| `screenshots/history.png` | `screenshots/settings.png` |
+| ![History](screenshots/history.png) | ![Settings](screenshots/settings.png) |
 
 ## ✨ Features
 
