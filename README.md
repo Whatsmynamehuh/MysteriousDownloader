@@ -15,10 +15,11 @@ To add screenshots, place your images in the `screenshots/` folder.
 
 
 ### Discography
-![Discography](screenshots/discography.png)
+![Discography](https://github.com/user-attachments/assets/49e6f01d-bc79-4cbe-b9df-8710c35ae4bd)
 
 ### Queue (Unified Hero)
-![Queue](screenshots/queue.png)
+![Queue](https://github.com/user-attachments/assets/b939f546-8bcf-4055-a244-cc1ab8f8b2a6)
+![Queue]([https://github.com/user-attachments/assets/b939f546-8bcf-4055-a244-cc1ab8f8b2a6](https://github.com/user-attachments/assets/acc540c9-297d-4945-93bb-15191b2bd288))
 
 ### History
 ![History](screenshots/history.png)
