@@ -1,23 +1,38 @@
-FROM golang:1.23-alpine AS builder
+FROM golang:1.23-bookworm AS builder
 
-RUN apk add --no-cache git build-base
+RUN apt-get update && apt-get install -y git build-essential
 WORKDIR /build
 RUN git clone https://github.com/zhaarey/apple-music-downloader.git .
 RUN go build -o apple-music-downloader main.go
 
-FROM python:3.11-alpine
+FROM ubuntu:24.04
+
+# Prevent interactive prompts during package installation
+ENV DEBIAN_FRONTEND=noninteractive
 
 # Install runtime dependencies
-# gcompat is CRITICAL for running glibc binaries (like the one in the .deb) on Alpine
-RUN apk add --no-cache ffmpeg nodejs npm gcompat libstdc++ wget unzip tar git binutils xz zstd
+# Ubuntu 24.04 includes FFmpeg 6.x (libavcodec60), which is required by the user's GPAC .deb
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
+    python3-venv \
+    ffmpeg \
+    nodejs \
+    npm \
+    wget \
+    unzip \
+    tar \
+    git \
+    binutils \
+    xz-utils \
+    zstd \
+    && rm -rf /var/lib/apt/lists/*
 
 # Argument for architecture
 ARG TARGETARCH
 
-# Install Bento4 and GPAC in a temporary directory
+# Install Bento4 (User provided link)
 WORKDIR /tmp/install
-
-# Install Bento4 (User provided link for x86_64)
 RUN echo "Installing Bento4..." && \
     wget -O bento4.zip https://www.bok.net/Bento4/binaries/Bento4-SDK-1-6-0-641.x86_64-unknown-linux.zip && \
     unzip bento4.zip && \
@@ -25,32 +40,17 @@ RUN echo "Installing Bento4..." && \
     cp -r Bento4-SDK-*/bin/* /usr/local/bin/ && \
     rm -rf Bento4-SDK-* bento4.zip
 
-# Install GPAC (User provided link for x86_64 .deb)
-# We extract the .deb manually since apk doesn't support it.
-# We handle different compression formats (xz, gz, zst).
+# Install GPAC (User provided link)
+# We use apt-get install ./gpac.deb. This works on Ubuntu 24.04 because it has the required newer libraries.
 RUN echo "Installing GPAC..." && \
     wget -O gpac.deb https://download.tsi.telecom-paristech.fr/gpac/new_builds/gpac_latest_head_linux64.deb && \
-    ar x gpac.deb && \
-    # Find the data tarball
-    DATA_TAR=$(ls data.tar.*) && \
-    echo "Found data archive: $DATA_TAR" && \
-    # Extract based on extension or let tar auto-detect if supported
-    if echo "$DATA_TAR" | grep -q ".zst"; then \
-        unzstd "$DATA_TAR" -o data.tar && tar -xf data.tar; \
-    else \
-        tar -xf "$DATA_TAR"; \
-    fi && \
-    # Copy binaries
-    cp -r usr/bin/* /usr/local/bin/ && \
-    # Copy libraries (handle lib vs lib64)
-    if [ -d "usr/lib" ]; then cp -r usr/lib/* /usr/local/lib/; fi && \
-    if [ -d "usr/lib64" ]; then cp -r usr/lib64/* /usr/local/lib/; fi && \
-    # Copy shared resources
-    if [ -d "usr/share" ]; then cp -r usr/share/* /usr/local/share/; fi && \
-    # Cleanup
-    cd / && rm -rf /tmp/install
+    apt-get update && apt-get install -y ./gpac.deb && \
+    rm gpac.deb && \
+    # Create a lowercase symlink just in case some tools look for 'mp4box'
+    ln -s /usr/bin/MP4Box /usr/local/bin/mp4box && \
+    rm -rf /var/lib/apt/lists/*
 
-# Clone Wrapper Repo (to get rootfs and other assets)
+# Clone Wrapper Repo
 WORKDIR /app
 RUN git clone https://github.com/zhaarey/wrapper.git .
 
@@ -71,11 +71,11 @@ RUN echo "Building for architecture: $TARGETARCH" && \
 RUN chmod +x wrapper
 
 # Setup application directory
-# (We stay in /app which now has wrapper repo contents)
 COPY --from=builder /build/apple-music-downloader /usr/local/bin/apple-music-downloader
 
 # Install Python dependencies
-RUN pip install fastapi uvicorn websockets requests PyYAML ruamel.yaml
+# Use --break-system-packages because Ubuntu 24.04 enforces PEP 668
+RUN pip3 install --break-system-packages fastapi uvicorn websockets requests PyYAML ruamel.yaml
 
 # Copy application files
 COPY web_server.py .
@@ -90,4 +90,4 @@ RUN chmod -R 777 /app
 EXPOSE 5000 10020
 
 # Run the web server
-CMD ["python", "web_server.py"]
+CMD ["python3", "web_server.py"]
