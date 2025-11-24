@@ -1,9 +1,0 @@
-This folder contains screenshots for the README.
-Place images here with the following names to automatically update the README:
-
-- login.png
-- search.png
-- discography.png
-- queue.png
-- history.png
-- settings.png
