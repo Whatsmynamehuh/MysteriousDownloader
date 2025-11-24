@@ -19,13 +19,17 @@ To add screenshots, place your images in the `screenshots/` folder.
 
 ### Queue (Unified Hero)
 ![Queue](https://github.com/user-attachments/assets/b939f546-8bcf-4055-a244-cc1ab8f8b2a6)
-![Queue]([https://github.com/user-attachments/assets/b939f546-8bcf-4055-a244-cc1ab8f8b2a6](https://github.com/user-attachments/assets/acc540c9-297d-4945-93bb-15191b2bd288))
+![Queue1]([https://github.com/user-attachments/assets/b939f546-8bcf-4055-a244-cc1ab8f8b2a6](https://github.com/user-attachments/assets/acc540c9-297d-4945-93bb-15191b2bd288))
 
 ### History
-![History](screenshots/history.png)
+![History](https://github.com/user-attachments/assets/3164aa41-0196-41a3-b55b-cb54ac25c7aa)
 
 ### Settings
-![Settings](screenshots/settings.png)
+![Settings](https://github.com/user-attachments/assets/83884354-ad9b-456c-b76f-33868bf91cdf)
+![Settings1](https://github.com/user-attachments/assets/6819e3ca-d4f9-411d-9b1f-b6cd65891bb1)
+
+### Apple Website
+![Settings2](https://github.com/user-attachments/assets/9d2073fc-17f5-43d6-95fe-929f51ea30d8)
 
 ## ✨ Features
 
