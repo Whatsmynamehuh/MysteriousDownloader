@@ -10,7 +10,7 @@ To add screenshots, place your images in the `screenshots/` folder.
 ![Login](https://github.com/user-attachments/assets/741a660f-b5c8-4a0f-93c0-6675286d3a0a)
 
 ### Search
-![Search](https://github.com/user-attachments/assets/2c816b7e-7cd0-4de3-a879-8c8eb8b2deea")
+![Search](https://github.com/user-attachments/assets/2c816b7e-7cd0-4de3-a879-8c8eb8b2deea)
 
 ### Discography
 ![Discography](screenshots/discography.png)
