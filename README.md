@@ -1,10 +1,6 @@
-# MysteriousDownloader (DDownloaderv2)
+# MysteriousDownloader
 
 A powerful, modern, and modular Web UI for downloading high-quality audio from Apple Music. Built with Python (FastAPI) and Vanilla JavaScript, designed to run seamlessly in Docker.
-
-## 📸 Screenshots
-
-To add screenshots, place your images in the `screenshots/` folder.
 
 ### Login
 ![Login](https://github.com/user-attachments/assets/741a660f-b5c8-4a0f-93c0-6675286d3a0a)
@@ -19,7 +15,9 @@ To add screenshots, place your images in the `screenshots/` folder.
 
 ### Queue (Unified Hero)
 ![Queue](https://github.com/user-attachments/assets/b939f546-8bcf-4055-a244-cc1ab8f8b2a6)
-![Queue1]([https://github.com/user-attachments/assets/b939f546-8bcf-4055-a244-cc1ab8f8b2a6](https://github.com/user-attachments/assets/acc540c9-297d-4945-93bb-15191b2bd288))
+![Queue1]([https://github.com/user-attachments/assets/b939f546-8bcf-4055-a244-cc1ab8f8b2a6])
+![Queue2](https://github.com/user-attachments/assets/acc540c9-297d-4945-93bb-15191b2bd288)
+
 
 ### History
 ![History](https://github.com/user-attachments/assets/3164aa41-0196-41a3-b55b-cb54ac25c7aa)
