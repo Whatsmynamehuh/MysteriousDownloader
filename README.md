@@ -16,7 +16,7 @@ A powerful, modern, and modular Web UI for downloading high-quality audio from A
 ### Queue (Unified Hero)
 ![Queue](https://github.com/user-attachments/assets/b939f546-8bcf-4055-a244-cc1ab8f8b2a6)
 
-![Queue11]([https://github.com/user-attachments/assets/b939f546-8bcf-4055-a244-cc1ab8f8b2a6])
+![Queue1]([https://github.com/user-attachments/assets/b939f546-8bcf-4055-a244-cc1ab8f8b2a6)
 
 ![Queue2](https://github.com/user-attachments/assets/acc540c9-297d-4945-93bb-15191b2bd288)
 
